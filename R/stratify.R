@@ -43,7 +43,7 @@ stratify_simple <- function(
     totwgt_units = "ton",
     debug = F
 ) {
-
+  
   if (!is.null(tblList)) {
     df <- easyFlatten(tblList)
     df <- df[df$TYPE == 1, ]
@@ -696,7 +696,6 @@ stratify_detailed <- function(
         }
       )
     )
-    
     ###### SECOND BLOCK ######
     
     total_df <- lenStrat_total |>
@@ -1300,6 +1299,7 @@ stratify_detailed <- function(
         }
       )
     )
+    
     
     summary_age <- AGE_MEAN |>
       dplyr::left_join(AGE_TOTAL, by = c("YEAR","SPEC","AGE_col")) |>
